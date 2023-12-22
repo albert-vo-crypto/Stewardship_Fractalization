@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Kicker+Trial:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Manrope;
+  min-height: 100vh;
+  color: black;
+  background-color: rgb(244 244 245);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    text-align: center;
+    width: 0px;
+    height: calc(100vh - 90px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+}
